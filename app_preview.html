@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+        .preview-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .preview-title {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .mockup {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .app-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .app-title {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .input-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .input-field {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .add-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .stats-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            display: block;
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+        }
+        .task-list {
+            margin-bottom: 20px;
+        }
+        .task-item {
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .task-item.completed {
+            background: #e8f5e8;
+            border-left-color: #28a745;
+            opacity: 0.7;
+        }
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+        }
+        .task-text {
+            flex: 1;
+            font-size: 16px;
+            color: #333;
+        }
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .delete-button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .clear-button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 14px;
+        }
+        .features-list {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .features-list h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .features-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding: 5px 0;
+            color: #666;
+        }
+        .features-list li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .note strong {
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1 class="preview-title">📱 To-Do App Visual Preview</h1>
+        
+        <div class="mockup">
+            <div class="app-container">
+                <h1 class="app-title">My To-Do List</h1>
+                
+                <div class="input-section">
+                    <input type="text" class="input-field" placeholder="Enter a new task..." value="">
+                    <button class="add-button">Add Task</button>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span>Total</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1</span>
+                        <span>Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span>Remaining</span>
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox">
+                        <span class="task-text">Complete internship task</span>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                    <div class="task-item completed">
+                        <input type="checkbox" class="task-checkbox" checked>
+                        <span class="task-text">Study JavaScript DOM manipulation</span>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" class="task-checkbox">
+                        <span class="task-text">Submit GitHub repository</span>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+
+                <button class="clear-button">Clear Completed Tasks</button>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <h3>🚀 App Features Demonstrated:</h3>
+            <ul>
+                <li>Beautiful gradient background with modern design</li>
+                <li>Responsive layout that works on all devices</li>
+                <li>Real-time statistics showing task counts</li>
+                <li>Smooth animations and hover effects</li>
+                <li>Add tasks by typing and clicking Add or pressing Enter</li>
+                <li>Mark tasks complete with checkboxes</li>
+                <li>Delete individual tasks with Delete buttons</li>
+                <li>Clear all completed tasks at once</li>
+                <li>Visual feedback for completed tasks (strikethrough)</li>
+                <li>Empty state message when no tasks exist</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> This is a visual representation. Your actual app will have interactive features like hover effects, animations, and full functionality. The design is modern and professional, perfect for your internship submission!
+        </div>
+
+        <div class="note">
+            <strong>How to get actual screenshots:</strong>
+            <ol>
+                <li>Open the index.html file in your browser</li>
+                <li>Add some sample tasks to see the full interface</li>
+                <li>Use your browser's screenshot tool or snipping tool</li>
+                <li>Take screenshots of different states (empty, with tasks, completed tasks)</li>
+                <li>Include these screenshots in your GitHub repository</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
